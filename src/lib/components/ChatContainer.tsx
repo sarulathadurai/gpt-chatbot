@@ -49,7 +49,6 @@ export default function ChatContainer() {
   const { chats, isLoadingResponse } = useChatsStore(
     (state) => ({
       chats: state.chats,
-      fetchAiResponse: state.fetchAiResponse,
       isLoadingResponse: state.isLoadingResponse,
     }),
     shallow

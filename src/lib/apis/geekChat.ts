@@ -3,11 +3,11 @@ export interface companyDetsType {
   website: string;
 }
 
-export function geekChat(chat: string, company: companyDetsType) {
+export function geekChat(chat: string, company: companyDetsType, key: string) {
   return fetch("https://api.openai.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer " + process.env.REACT_OPENAI_API_KEY,
+      Authorization: "Bearer " + key,
     },
     method: "POST",
     body: JSON.stringify({
