@@ -15,12 +15,12 @@ export function geekChat(chat: string, company: companyDetsType, key: string) {
       messages: [
         {
           role: "system",
-          content: `You are a chatbot of ${company.name} company.Their website is ${company.website}.Provide website link if possible`,
+          content: `You are a chatbot of ${company.name} company.Answer questions in first person perspective.Their website is ${company.website}.Provide related urls`,
         },
         {
           role: "user",
           content: `${chat}.
-        If the above text is not related to ${company.name} company and coding you should give response as 'Sorry, I can't answer that question'
+        If the above text is not related to ${company.name} company you should give response as 'Sorry, I can't answer that question'
         `,
         },
       ],

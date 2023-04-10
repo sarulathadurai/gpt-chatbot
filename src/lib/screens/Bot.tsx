@@ -12,7 +12,7 @@ interface BotPropTypes {
   chatContainer: ReactNode;
   companyDetails: companyDetsType;
   chatTheme: ThemeOptions;
-  key: string;
+  apiKey: string;
 }
 
 function Bot({
@@ -22,7 +22,7 @@ function Bot({
   chatContainer,
   companyDetails,
   chatTheme,
-  key,
+  apiKey,
 }: BotPropTypes) {
   const [message, setMessage] = useState("");
   const messageRef = useRef<HTMLDivElement>(null);
@@ -51,7 +51,7 @@ function Bot({
   };
   const appendChatList = () => {
     if (message) {
-      fetchAiResponse(message, companyDetails, key);
+      fetchAiResponse(message, companyDetails, apiKey);
       setMessage("");
     }
   };
