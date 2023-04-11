@@ -4,6 +4,7 @@ import { useChatsStore } from "../zustand/chatsStore";
 import { shallow } from "zustand/shallow";
 import { companyDetsType } from "../apis/geekChat";
 import { createTheme, ThemeOptions, ThemeProvider } from "@mui/material/styles";
+import ChatContainer from "../components/ChatContainer";
 
 interface BotPropTypes {
   buttonStyle?: object;
@@ -69,8 +70,7 @@ function Bot({
           {header}
           <Box flex={1} p={3} className="chat-container">
             <>
-              {chatContainer}
-
+              <ChatContainer />
               <div ref={messageRef}></div>
             </>
           </Box>
