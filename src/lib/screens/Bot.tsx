@@ -10,7 +10,6 @@ interface BotPropTypes {
   buttonStyle?: object;
   inputStyle?: object;
   header: ReactNode;
-  chatContainer: ReactNode;
   companyDetails: companyDetsType;
   chatTheme: ThemeOptions;
   apiKey: string;
@@ -20,7 +19,6 @@ function Bot({
   buttonStyle,
   inputStyle,
   header,
-  chatContainer,
   companyDetails,
   chatTheme,
   apiKey,
